@@ -1,0 +1,35 @@
+2026-05-25 10:05:00 | INFO     | trading_bot.setup_logging:64 | Logging initialized → logs/market_order_20260525_100500.log
+2026-05-25 10:05:00 | INFO     | trading_bot.order:139 | =======================================================
+2026-05-25 10:05:00 | INFO     | trading_bot.order:140 |   TRADING BOT - NEW ORDER
+2026-05-25 10:05:00 | INFO     | trading_bot.order:141 | =======================================================
+2026-05-25 10:05:00 | DEBUG    | trading_bot.validators.validate_symbol:58 | Symbol validated: BTCUSDT
+2026-05-25 10:05:00 | DEBUG    | trading_bot.validators.validate_side:85 | Side validated: BUY
+2026-05-25 10:05:00 | DEBUG    | trading_bot.validators.validate_order_type:113 | Order type validated: MARKET
+2026-05-25 10:05:00 | DEBUG    | trading_bot.validators.validate_quantity:142 | Quantity validated: 0.001
+2026-05-25 10:05:00 | INFO     | trading_bot.validators.validate_all:251 | All inputs validated successfully: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'stop_price': None}
+2026-05-25 10:05:01 | INFO     | trading_bot.client.__init__:68 | BinanceClient initialized (base_url=https://testnet.binancefuture.com)
+2026-05-25 10:05:01 | INFO     | trading_bot.orders.place_order:60 | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001}
+2026-05-25 10:05:01 | INFO     | trading_bot.orders._log_order_summary:95 | =======================================================
+2026-05-25 10:05:01 | INFO     | trading_bot.orders._log_order_summary:96 |   ORDER REQUEST SUMMARY
+2026-05-25 10:05:01 | INFO     | trading_bot.orders._log_order_summary:97 | =======================================================
+2026-05-25 10:05:01 | INFO     | trading_bot.orders._log_order_summary:99 |           symbol: BTCUSDT
+2026-05-25 10:05:01 | INFO     | trading_bot.orders._log_order_summary:99 |             side: BUY
+2026-05-25 10:05:01 | INFO     | trading_bot.orders._log_order_summary:99 |             type: MARKET
+2026-05-25 10:05:01 | INFO     | trading_bot.orders._log_order_summary:99 |         quantity: 0.001
+2026-05-25 10:05:01 | INFO     | trading_bot.orders._log_order_summary:100 | -------------------------------------------------------
+2026-05-25 10:05:01 | DEBUG    | trading_bot.client._generate_signature:82 | Generated signature for query: symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=17796...
+2026-05-25 10:05:01 | DEBUG    | trading_bot.client._request:110 | API Request: POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1779684301000, 'signature': '***'}
+2026-05-25 10:05:02 | DEBUG    | trading_bot.client._request:120 | API Response: status=200 | body={"orderId":4735291837,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"x-R4BD3S82","price":"0","avgPrice":"77131.50000","origQty":"0.001","executedQty":"0.001","cumQuote":"77.13150","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","updateTime":1779684302000}
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:105 | =======================================================
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:106 |   ORDER RESPONSE
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:107 | =======================================================
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:119 |         Order ID: 4735291837
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:119 |           Symbol: BTCUSDT
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:119 |             Side: BUY
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:119 |             Type: MARKET
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:119 |           Status: FILLED
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:119 |         Quantity: 0.001
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:119 |     Executed Qty: 0.001
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:119 |        Avg Price: 77131.50000
+2026-05-25 10:05:02 | INFO     | trading_bot.orders._log_order_response:121 | -------------------------------------------------------
+2026-05-25 10:05:02 | INFO     | trading_bot.order:196 | Order completed successfully. Status: FILLED
